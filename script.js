@@ -4,6 +4,7 @@ const optionEle = document.querySelector(".options");
 const timerEle = document.querySelector(".timer");
 const next = document.querySelector(".next");
 const start = document.querySelector(".start");
+const skip = document.querySelector(".skip");
 
 const quizQuestions = [
   {
@@ -132,6 +133,7 @@ function loadQuestion() {
 function startTheQuizz() {
   timerEle.classList.remove("none");
   next.classList.remove("none");
+  skip.classList.remove("none");
   loadQuestion();
 }
 
@@ -169,6 +171,11 @@ function restartGame(event) {
   }
 }
 
+function skipToNextQuestion(e) {
+  currentIndex++;
+  moveToNextQuestion();
+}
+
 start.addEventListener("click", startTheQuizz);
 
 next.addEventListener("click", moveToNextQuestion);
@@ -183,5 +190,7 @@ optionEle.addEventListener("click", (e) => {
     }
   }
 });
+
+skip.addEventListener("click", skipToNextQuestion);
 
 quizzBox.addEventListener("click", restartGame);

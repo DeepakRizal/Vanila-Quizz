@@ -34,7 +34,7 @@ body {
 }
 .option {
   background-color: white;
-  padding: 2px 5px;
+  padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -51,8 +51,10 @@ body {
 }
 
 .button-box button,
-.restart {
-  padding: 3px 10px;
+.restart,
+.skip,
+.start {
+  padding: 10px 20px;
   border: none;
   border-radius: 3px;
   background-color: blue;
