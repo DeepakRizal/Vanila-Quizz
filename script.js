@@ -172,7 +172,6 @@ function restartGame(event) {
 }
 
 function skipToNextQuestion(e) {
-  currentIndex++;
   moveToNextQuestion();
 }
 
